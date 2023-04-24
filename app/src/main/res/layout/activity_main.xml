@@ -1,21 +1,82 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:background="#404040"
+    android:columnCount="3"
+    android:rowCount="2"
+    android:useDefaultMargins="true">
 
-    <TextureView
-        android:id="@+id/textureView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+    <Button
+        android:id="@+id/button_cook"
+        android:layout_width="0dp"
+        android:backgroundTint="#000000"
+        android:layout_height="0dp"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        android:layout_margin="8dp"
+        android:padding="8dp"
+        android:text="Cook"
+        android:gravity="center"/>
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#000"
-        android:id="@+id/imageView"/>
+    <Button
+        android:id="@+id/button_code"
+        android:backgroundTint="#000000"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        android:layout_margin="8dp"
+        android:padding="8dp"
+        android:text="Code"
+        android:gravity="center"/>
 
+    <Button
+        android:id="@+id/button_design"
+        android:backgroundTint="#000000"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        android:layout_margin="8dp"
+        android:padding="8dp"
+        android:text="Design"
+        android:gravity="center"/>
 
-</RelativeLayout>
+    <Button
+        android:id="@+id/button_ask"
+        android:backgroundTint="#000000"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        android:layout_margin="8dp"
+        android:padding="8dp"
+        android:text="Ask"
+        android:gravity="center"/>
+
+    <Button
+        android:id="@+id/button_question"
+        android:backgroundTint="#000000"
+        android:layout_width="0dp"
+        android:layout_height= "0dp"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        android:layout_margin="8dp"
+        android:paddingHorizontal="10dp"
+        android:padding="8dp"
+        android:text="Question"
+        android:gravity="center"/>
+
+    <Button
+        android:id="@+id/button_build"
+        android:backgroundTint="#000000"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        android:layout_margin="8dp"
+        android:padding="8dp"
+        android:text="Build"
+        android:gravity="center"/>
+
+</GridLayout>
