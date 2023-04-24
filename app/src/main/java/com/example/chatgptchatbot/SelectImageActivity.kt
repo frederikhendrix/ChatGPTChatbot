@@ -15,8 +15,14 @@ import org.tensorflow.lite.support.image.TensorImage
 import org.tensorflow.lite.support.image.ops.ResizeOp
 
 class SelectImageActivity : AppCompatActivity() {
+
+
+    val objects: ArrayList<Object> = ArrayList()
+    lateinit var intentString: String;
+
     val paint = Paint()
     lateinit var btn: Button
+    lateinit var btnContinue: Button
     lateinit var imageView: ImageView
     lateinit var bitmap: Bitmap
     var colors = listOf<Int>(
@@ -31,6 +37,8 @@ class SelectImageActivity : AppCompatActivity() {
         setContentView(R.layout.activity_select_image)
 
         val value = intent.getStringExtra("value")
+        println(value.toString())
+        intentString = value.toString()
 
         labels = FileUtil.loadLabels(this, "labels.txt")
         model = SsdMobilenetV11Metadata1.newInstance(this)
@@ -52,6 +60,12 @@ class SelectImageActivity : AppCompatActivity() {
         btn.setOnClickListener {
             startActivityForResult(intent, 101)
         }
+
+        val btnContinue = findViewById<Button>(R.id.btnContinue)
+        btnContinue.setOnClickListener {
+            startThirdActivity(intentString, objects);
+        }
+
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
@@ -97,10 +111,26 @@ class SelectImageActivity : AppCompatActivity() {
                 canvas.drawRect(RectF(locations.get(x+1)*w, locations.get(x)*h, locations.get(x+3)*w, locations.get(x+2)*h), paint)
                 paint.style = Paint.Style.FILL
                 canvas.drawText(labels[classes.get(index).toInt()] + " " + fl.toString(), locations.get(x+1)*w, locations.get(x)*h, paint)
+
+                val object1 = Object(labels[classes.get(index).toInt()], fl)
+                println(labels[classes.get(index).toInt()])
+                println(fl.toString());
+                objects.add(object1)
             }
         }
 
         imageView.setImageBitmap(mutable)
 
+    }
+
+    private fun startThirdActivity(value: String, list: ArrayList<Object>) {
+        val intent = Intent(this, ChatActivity::class.java)
+
+        // put the string value and mutable list of objects into the intent\
+        intent.putExtra("STRING_KEY", value)
+        intent.putExtra("OBJECT_LIST_KEY", ArrayList(list))
+
+        // start the ThirdActivity
+        startActivity(intent)
     }
 }

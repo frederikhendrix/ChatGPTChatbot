@@ -1,10 +1,8 @@
 package com.example.chatgptchatbot
 
-class Object constructor(
+import java.io.Serializable
+
+class Object(
     var name: String,
     var probability: Float
-
-){
-
-
-}
+): Serializable
