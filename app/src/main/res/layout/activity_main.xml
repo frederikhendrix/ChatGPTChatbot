@@ -27,7 +27,7 @@
         android:layout_rowWeight="1"
         android:layout_margin="8dp"
         android:padding="8dp"
-        android:text="Code"
+        android:text="Programmer"
         android:gravity="center"/>
 
     <Button
@@ -39,7 +39,7 @@
         android:layout_rowWeight="1"
         android:layout_margin="8dp"
         android:padding="8dp"
-        android:text="Design"
+        android:text="Home Designer"
         android:gravity="center"/>
 
     <Button
@@ -51,7 +51,7 @@
         android:layout_rowWeight="1"
         android:layout_margin="8dp"
         android:padding="8dp"
-        android:text="Ask"
+        android:text="Electric Technician"
         android:gravity="center"/>
 
     <Button
@@ -64,7 +64,7 @@
         android:layout_margin="8dp"
         android:paddingHorizontal="10dp"
         android:padding="8dp"
-        android:text="Question"
+        android:text="UX specialist"
         android:gravity="center"/>
 
     <Button
@@ -76,7 +76,7 @@
         android:layout_rowWeight="1"
         android:layout_margin="8dp"
         android:padding="8dp"
-        android:text="Build"
+        android:text="Interface Tester"
         android:gravity="center"/>
 
 </GridLayout>

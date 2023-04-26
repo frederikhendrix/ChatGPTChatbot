@@ -18,27 +18,27 @@ class MainActivity : AppCompatActivity() {
 
         val buttonCode = findViewById<Button>(R.id.button_code)
         buttonCode.setOnClickListener {
-            startSecondActivity("Code")
+            startSecondActivity("Programmer")
         }
 
         val buttonDesign = findViewById<Button>(R.id.button_design)
         buttonDesign.setOnClickListener {
-            startSecondActivity("Design")
+            startSecondActivity("Home Designer")
         }
 
         val buttonAsk = findViewById<Button>(R.id.button_ask)
         buttonAsk.setOnClickListener {
-            startSecondActivity("Ask")
+            startSecondActivity("Electric Technician")
         }
 
         val buttonQuestion = findViewById<Button>(R.id.button_question)
         buttonQuestion.setOnClickListener {
-            startSecondActivity("Question")
+            startSecondActivity("UX specialist")
         }
 
         val buttonBuild = findViewById<Button>(R.id.button_build)
         buttonBuild.setOnClickListener {
-            startSecondActivity("Build")
+            startSecondActivity("Interface Tester")
         }
     }
 
